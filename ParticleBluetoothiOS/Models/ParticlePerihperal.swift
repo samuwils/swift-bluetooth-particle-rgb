@@ -17,12 +17,11 @@ class ParticlePeripheral: NSObject {
     
     /// MARK: - Particle LED services and charcteristics Identifiers
     
-    public static let particleLEDServiceUUID     = CBUUID.init(string: "b4250400-fb4b-4746-b2b0-93f0e61122c6")
-    public static let redLEDCharacteristicUUID   = CBUUID.init(string: "b4250401-fb4b-4746-b2b0-93f0e61122c6")
-    public static let greenLEDCharacteristicUUID = CBUUID.init(string: "b4250402-fb4b-4746-b2b0-93f0e61122c6")
-    public static let blueLEDCharacteristicUUID  = CBUUID.init(string: "b4250403-fb4b-4746-b2b0-93f0e61122c6")
+    public static let particleLEDServiceUUID     = CBUUID.init(string: "de8a5aac-a99b-c315-0c80-60d4cbb51224")
+    public static let redLEDCharacteristicUUID   = CBUUID.init(string: "5b026510-4088-c297-46d8-be6c736a087a")
+    public static let batteryCharacteristicUUID  = CBUUID.init(string: "61a885a4-41c3-60d0-9a53-6d652a70d29c")
+
     
-    public static let batteryServiceUUID         = CBUUID.init(string: "180f")
-    public static let batteryCharacteristicUUID  = CBUUID.init(string: "2a19")
+
     
 }

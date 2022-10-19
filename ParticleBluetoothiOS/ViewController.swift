@@ -45,7 +45,10 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
             print("Central is not powered on")
         } else {
             print("Central scanning for", ParticlePeripheral.particleLEDServiceUUID);
-            centralManager.scanForPeripherals(withServices: [ParticlePeripheral.particleLEDServiceUUID],
+//            centralManager.scanForPeripherals(withServices: [ParticlePeripheral.particleLEDServiceUUID],
+//                                              options: [CBCentralManagerScanOptionAllowDuplicatesKey : true])
+//
+            centralManager.scanForPeripherals(withServices: nil,
                                               options: [CBCentralManagerScanOptionAllowDuplicatesKey : true])
         }
     }
@@ -53,15 +56,35 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
     // Handles the result of the scan
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         
+        print("Discovered \(peripheral )")
+        print("Discovered \(peripheral.name ?? "")")
+        
+        print("Discovered \(advertisementData )")
+        
+        guard peripheral.name != nil else {return}
+          
+          if peripheral.name! == "Blinky Example" {
+          
+            print("Sensor Found!")
+            //stopScan
+              self.centralManager.stopScan()
+            
+            //connect
+              self.centralManager.connect(peripheral, options: nil)
+            self.peripheral = peripheral
+              self.peripheral.delegate = self
+           
+           }
+        //if peripheral.name
         // We've found it so stop scan
-        self.centralManager.stopScan()
+        //self.centralManager.stopScan()
         
         // Copy the peripheral instance
-        self.peripheral = peripheral
-        self.peripheral.delegate = self
+        //self.peripheral = peripheral
+        //self.peripheral.delegate = self
         
         // Connect!
-        self.centralManager.connect(self.peripheral, options: nil)
+        //self.centralManager.connect(self.peripheral, options: nil)
         
     }
     
@@ -69,7 +92,7 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
         if peripheral == self.peripheral {
             print("Connected to your Particle Board")
-            peripheral.discoverServices([ParticlePeripheral.particleLEDServiceUUID,ParticlePeripheral.batteryServiceUUID]);
+            peripheral.discoverServices([ParticlePeripheral.particleLEDServiceUUID]);
         }
     }
     
@@ -102,13 +125,9 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
                     print("LED service found")
                     //Now kick off discovery of characteristics
                     peripheral.discoverCharacteristics([ParticlePeripheral.redLEDCharacteristicUUID,
-                                                             ParticlePeripheral.greenLEDCharacteristicUUID,
-                                                             ParticlePeripheral.blueLEDCharacteristicUUID], for: service)
+                                                             ParticlePeripheral.batteryCharacteristicUUID], for: service)
                 }
-                if( service.uuid == ParticlePeripheral.batteryServiceUUID ) {
-                    print("Battery service found")
-                    peripheral.discoverCharacteristics([ParticlePeripheral.batteryCharacteristicUUID], for: service)
-                }
+
             }
         }
     }
@@ -145,31 +164,16 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
                     
                     // Unmask red slider
                     redSlider.isEnabled = true
-                } else if characteristic.uuid == ParticlePeripheral.greenLEDCharacteristicUUID {
-                    print("Green LED characteristic found")
-                    
-                    // Set the characteristic
-                    greenChar = characteristic
-                    
-                    // Unmask green slider
-                    greenSlider.isEnabled = true
-                } else if characteristic.uuid == ParticlePeripheral.blueLEDCharacteristicUUID {
-                    print("Blue LED characteristic found");
-                    
-                    // Set the characteristic
-                    blueChar = characteristic
-                    
-                    // Unmask blue slider
-                    blueSlider.isEnabled = true
-                } else if characteristic.uuid == ParticlePeripheral.batteryCharacteristicUUID {
-                    print("Battery characteristic found");
-                    
-                    // Set the char
-                    battChar = characteristic
-                    
-                    // Subscribe to the char.
-                    peripheral.setNotifyValue(true, for: characteristic)
-                }
+                } 
+                else if characteristic.uuid == ParticlePeripheral.batteryCharacteristicUUID {
+                                    print("Battery characteristic found");
+                                    
+                                    // Set the char
+                                    battChar = characteristic
+                                    
+                                    // Subscribe to the char.
+                                    peripheral.setNotifyValue(true, for: characteristic)
+                                }
             }
         }
     }
@@ -177,17 +181,25 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
     private func writeLEDValueToChar( withCharacteristic characteristic: CBCharacteristic, withValue value: Data) {
         
         // Check if it has the write property
-        if characteristic.properties.contains(.writeWithoutResponse) && peripheral != nil {
-            
-            peripheral.writeValue(value, for: characteristic, type: .withoutResponse)
+        //if characteristic.properties.contains(.writeWithoutResponse) && peripheral != nil {
+            print("value: ", value);
+            peripheral.writeValue(value, for: characteristic, type: .withResponse)
 
-        }
+        //}
         
     }
 
     @IBAction func redChanged(_ sender: Any) {
         print("red:",redSlider.value);
-        let slider:UInt8 = UInt8(redSlider.value)
+        var slider:UInt8 = UInt8(redSlider.value)
+        if (slider > 125)
+        {
+            slider = 1
+        }
+        else
+        {
+            slider = 0
+        }
         writeLEDValueToChar( withCharacteristic: redChar!, withValue: Data([slider]))
         
     }
@@ -198,12 +210,9 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
         writeLEDValueToChar( withCharacteristic: greenChar!, withValue: Data([slider]))
     }
     
-    @IBAction func blueChanged(_ sender: Any) {
-        print("blue:",blueSlider.value);
-        let slider:UInt8 = UInt8(blueSlider.value)
-        writeLEDValueToChar( withCharacteristic: blueChar!, withValue: Data([slider]))
-        
-    }
+
+    
+    
     
 }
 
