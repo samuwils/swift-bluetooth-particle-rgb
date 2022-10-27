@@ -14,8 +14,9 @@
 		2D02EF3822FD101100C13189 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D02EF3622FD101100C13189 /* LaunchScreen.storyboard */; };
 		2D02EF4322FD101100C13189 /* ParticleBluetoothiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D02EF4222FD101100C13189 /* ParticleBluetoothiOSTests.swift */; };
 		2D02EF4E22FD101100C13189 /* ParticleBluetoothiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D02EF4D22FD101100C13189 /* ParticleBluetoothiOSUITests.swift */; };
-		2D02EF6222FD12C500C13189 /* ParticlePerihperal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D02EF6122FD12C500C13189 /* ParticlePerihperal.swift */; };
+		2D02EF6222FD12C500C13189 /* ClockPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D02EF6122FD12C500C13189 /* ClockPeripheral.swift */; };
 		2D02EF6A22FFE46800C13189 /* Splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D02EF6922FFE46800C13189 /* Splash.png */; };
+		4C2ECB6E2904F9BC00AF1EF8 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2ECB6D2904F9BC00AF1EF8 /* Alarm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,21 +37,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2D02EF2A22FD101000C13189 /* ParticleBluetoothiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParticleBluetoothiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02EF2A22FD101000C13189 /* SunlightClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SunlightClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02EF2D22FD101000C13189 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D02EF2F22FD101000C13189 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2D02EF3222FD101000C13189 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2D02EF3422FD101100C13189 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D02EF3722FD101100C13189 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D02EF3922FD101100C13189 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2D02EF3E22FD101100C13189 /* ParticleBluetoothiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParticleBluetoothiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02EF3E22FD101100C13189 /* SunlightClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SunlightClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02EF4222FD101100C13189 /* ParticleBluetoothiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticleBluetoothiOSTests.swift; sourceTree = "<group>"; };
 		2D02EF4422FD101100C13189 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2D02EF4922FD101100C13189 /* ParticleBluetoothiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParticleBluetoothiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02EF4922FD101100C13189 /* SunlightClockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SunlightClockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02EF4D22FD101100C13189 /* ParticleBluetoothiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticleBluetoothiOSUITests.swift; sourceTree = "<group>"; };
 		2D02EF4F22FD101100C13189 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2D02EF6122FD12C500C13189 /* ParticlePerihperal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticlePerihperal.swift; sourceTree = "<group>"; };
+		2D02EF6122FD12C500C13189 /* ClockPeripheral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockPeripheral.swift; sourceTree = "<group>"; };
 		2D02EF6922FFE46800C13189 /* Splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Splash.png; sourceTree = "<group>"; };
+		4C2ECB6D2904F9BC00AF1EF8 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +83,7 @@
 		2D02EF2122FD101000C13189 = {
 			isa = PBXGroup;
 			children = (
-				2D02EF2C22FD101000C13189 /* ParticleBluetoothiOS */,
+				2D02EF2C22FD101000C13189 /* SunlightclockIOS */,
 				2D02EF4122FD101100C13189 /* ParticleBluetoothiOSTests */,
 				2D02EF4C22FD101100C13189 /* ParticleBluetoothiOSUITests */,
 				2D02EF2B22FD101000C13189 /* Products */,
@@ -91,14 +93,14 @@
 		2D02EF2B22FD101000C13189 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2D02EF2A22FD101000C13189 /* ParticleBluetoothiOS.app */,
-				2D02EF3E22FD101100C13189 /* ParticleBluetoothiOSTests.xctest */,
-				2D02EF4922FD101100C13189 /* ParticleBluetoothiOSUITests.xctest */,
+				2D02EF2A22FD101000C13189 /* SunlightClock.app */,
+				2D02EF3E22FD101100C13189 /* SunlightClockTests.xctest */,
+				2D02EF4922FD101100C13189 /* SunlightClockUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2D02EF2C22FD101000C13189 /* ParticleBluetoothiOS */ = {
+		2D02EF2C22FD101000C13189 /* SunlightclockIOS */ = {
 			isa = PBXGroup;
 			children = (
 				2D02EF6B22FFE46E00C13189 /* Assets */,
@@ -110,7 +112,7 @@
 				2D02EF3622FD101100C13189 /* LaunchScreen.storyboard */,
 				2D02EF3922FD101100C13189 /* Info.plist */,
 			);
-			path = ParticleBluetoothiOS;
+			path = SunlightclockIOS;
 			sourceTree = "<group>";
 		};
 		2D02EF4122FD101100C13189 /* ParticleBluetoothiOSTests */ = {
@@ -134,7 +136,8 @@
 		2D02EF6022FD12B300C13189 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2D02EF6122FD12C500C13189 /* ParticlePerihperal.swift */,
+				2D02EF6122FD12C500C13189 /* ClockPeripheral.swift */,
+				4C2ECB6D2904F9BC00AF1EF8 /* Alarm.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -150,9 +153,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2D02EF2922FD101000C13189 /* ParticleBluetoothiOS */ = {
+		2D02EF2922FD101000C13189 /* SunlightClock */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02EF5222FD101100C13189 /* Build configuration list for PBXNativeTarget "ParticleBluetoothiOS" */;
+			buildConfigurationList = 2D02EF5222FD101100C13189 /* Build configuration list for PBXNativeTarget "SunlightClock" */;
 			buildPhases = (
 				2D02EF2622FD101000C13189 /* Sources */,
 				2D02EF2722FD101000C13189 /* Frameworks */,
@@ -162,14 +165,14 @@
 			);
 			dependencies = (
 			);
-			name = ParticleBluetoothiOS;
+			name = SunlightClock;
 			productName = ParticleBluetoothiOS;
-			productReference = 2D02EF2A22FD101000C13189 /* ParticleBluetoothiOS.app */;
+			productReference = 2D02EF2A22FD101000C13189 /* SunlightClock.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02EF3D22FD101100C13189 /* ParticleBluetoothiOSTests */ = {
+		2D02EF3D22FD101100C13189 /* SunlightClockTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02EF5522FD101100C13189 /* Build configuration list for PBXNativeTarget "ParticleBluetoothiOSTests" */;
+			buildConfigurationList = 2D02EF5522FD101100C13189 /* Build configuration list for PBXNativeTarget "SunlightClockTests" */;
 			buildPhases = (
 				2D02EF3A22FD101100C13189 /* Sources */,
 				2D02EF3B22FD101100C13189 /* Frameworks */,
@@ -180,14 +183,14 @@
 			dependencies = (
 				2D02EF4022FD101100C13189 /* PBXTargetDependency */,
 			);
-			name = ParticleBluetoothiOSTests;
+			name = SunlightClockTests;
 			productName = ParticleBluetoothiOSTests;
-			productReference = 2D02EF3E22FD101100C13189 /* ParticleBluetoothiOSTests.xctest */;
+			productReference = 2D02EF3E22FD101100C13189 /* SunlightClockTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		2D02EF4822FD101100C13189 /* ParticleBluetoothiOSUITests */ = {
+		2D02EF4822FD101100C13189 /* SunlightClockUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02EF5822FD101100C13189 /* Build configuration list for PBXNativeTarget "ParticleBluetoothiOSUITests" */;
+			buildConfigurationList = 2D02EF5822FD101100C13189 /* Build configuration list for PBXNativeTarget "SunlightClockUITests" */;
 			buildPhases = (
 				2D02EF4522FD101100C13189 /* Sources */,
 				2D02EF4622FD101100C13189 /* Frameworks */,
@@ -198,9 +201,9 @@
 			dependencies = (
 				2D02EF4B22FD101100C13189 /* PBXTargetDependency */,
 			);
-			name = ParticleBluetoothiOSUITests;
+			name = SunlightClockUITests;
 			productName = ParticleBluetoothiOSUITests;
-			productReference = 2D02EF4922FD101100C13189 /* ParticleBluetoothiOSUITests.xctest */;
+			productReference = 2D02EF4922FD101100C13189 /* SunlightClockUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -211,7 +214,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
-				ORGANIZATIONNAME = "Jared Wolff";
+				ORGANIZATIONNAME = "Sam Wilson";
 				TargetAttributes = {
 					2D02EF2922FD101000C13189 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -226,7 +229,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2D02EF2522FD101000C13189 /* Build configuration list for PBXProject "ParticleBluetoothiOS" */;
+			buildConfigurationList = 2D02EF2522FD101000C13189 /* Build configuration list for PBXProject "SunlightClock" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -239,9 +242,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2D02EF2922FD101000C13189 /* ParticleBluetoothiOS */,
-				2D02EF3D22FD101100C13189 /* ParticleBluetoothiOSTests */,
-				2D02EF4822FD101100C13189 /* ParticleBluetoothiOSUITests */,
+				2D02EF2922FD101000C13189 /* SunlightClock */,
+				2D02EF3D22FD101100C13189 /* SunlightClockTests */,
+				2D02EF4822FD101100C13189 /* SunlightClockUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -279,9 +282,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D02EF6222FD12C500C13189 /* ParticlePerihperal.swift in Sources */,
+				2D02EF6222FD12C500C13189 /* ClockPeripheral.swift in Sources */,
 				2D02EF3022FD101000C13189 /* ViewController.swift in Sources */,
 				2D02EF2E22FD101000C13189 /* AppDelegate.swift in Sources */,
+				4C2ECB6E2904F9BC00AF1EF8 /* Alarm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,12 +310,12 @@
 /* Begin PBXTargetDependency section */
 		2D02EF4022FD101100C13189 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02EF2922FD101000C13189 /* ParticleBluetoothiOS */;
+			target = 2D02EF2922FD101000C13189 /* SunlightClock */;
 			targetProxy = 2D02EF3F22FD101100C13189 /* PBXContainerItemProxy */;
 		};
 		2D02EF4B22FD101100C13189 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02EF2922FD101000C13189 /* ParticleBluetoothiOS */;
+			target = 2D02EF2922FD101000C13189 /* SunlightClock */;
 			targetProxy = 2D02EF4A22FD101100C13189 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -458,7 +462,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 38U92NX3T9;
-				INFOPLIST_FILE = ParticleBluetoothiOS/Info.plist;
+				INFOPLIST_FILE = SunlightclockIOS/Info.plist;
+				"INFOPLIST_FILE[sdk=*]" = SunlightclockIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -476,7 +481,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 38U92NX3T9;
-				INFOPLIST_FILE = ParticleBluetoothiOS/Info.plist;
+				INFOPLIST_FILE = SunlightclockIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -505,7 +510,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParticleBluetoothiOS.app/ParticleBluetoothiOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SunlightClock.app/SunlightClock";
 			};
 			name = Debug;
 		};
@@ -526,7 +531,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParticleBluetoothiOS.app/ParticleBluetoothiOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SunlightClock.app/SunlightClock";
 			};
 			name = Release;
 		};
@@ -571,7 +576,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2D02EF2522FD101000C13189 /* Build configuration list for PBXProject "ParticleBluetoothiOS" */ = {
+		2D02EF2522FD101000C13189 /* Build configuration list for PBXProject "SunlightClock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02EF5022FD101100C13189 /* Debug */,
@@ -580,7 +585,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02EF5222FD101100C13189 /* Build configuration list for PBXNativeTarget "ParticleBluetoothiOS" */ = {
+		2D02EF5222FD101100C13189 /* Build configuration list for PBXNativeTarget "SunlightClock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02EF5322FD101100C13189 /* Debug */,
@@ -589,7 +594,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02EF5522FD101100C13189 /* Build configuration list for PBXNativeTarget "ParticleBluetoothiOSTests" */ = {
+		2D02EF5522FD101100C13189 /* Build configuration list for PBXNativeTarget "SunlightClockTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02EF5622FD101100C13189 /* Debug */,
@@ -598,7 +603,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02EF5822FD101100C13189 /* Build configuration list for PBXNativeTarget "ParticleBluetoothiOSUITests" */ = {
+		2D02EF5822FD101100C13189 /* Build configuration list for PBXNativeTarget "SunlightClockUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02EF5922FD101100C13189 /* Debug */,
